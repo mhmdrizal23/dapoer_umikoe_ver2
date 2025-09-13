@@ -1,0 +1,175 @@
+/* Section 1 - Product Banner */
+.product-banner {
+  position: relative;
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #333;
+  opacity: 0.8;
+}
+
+.breadcrumb span {
+  font-weight: bold;
+  color: #555;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.product-package-container {
+  display: none; /* the actual packages are in the background image, so hidden */
+}
+
+/* Responsive note: adjust height or font sizes as needed */
+
+/* Section 2 - About Us */
+.section-2.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px;
+  background-color: #f8f1ed;
+  font-family: 'Arial', sans-serif;
+  color: #3e3e3e;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 350px;
+  position: relative;
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text {
+  flex: 2 1 400px;
+  max-width: 600px;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #292929;
+}
+
+.about-text p {
+  margin-bottom: 16px;
+  color: #5a5a5a;
+}
+
+.signature {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 12px;
+  color: #7b6d5a;
+}
+
+/* Decorative corner lines and dots similar as in image */
+.section-2.about-us::before,
+.section-2.about-us::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #9b9b9b33;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.section-2.about-us::before {
+  top: 25px;
+  left: 25px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.section-2.about-us::after {
+  bottom: 25px;
+  right: 25px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Small dotted corner */
+.about-text::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #5f6c58;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+  box-shadow:
+    10px 0 #5f6c58,
+    20px 0 #5f6c58,
+    0 10px #5f6c58,
+    10px 10px #5f6c58,
+    20px 10px #5f6c58;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .section-2.about-us {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .section-2.about-us::before,
+  .section-2.about-us::after {
+    display: none;
+  }
+}

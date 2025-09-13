@@ -1,0 +1,218 @@
+/* Section 1 - Product Banner */
+.product-banner {
+  position: relative;
+  background-image: url('image.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent white */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #333;
+  opacity: 0.8;
+}
+
+.breadcrumb span {
+  font-weight: bold;
+  color: #555;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.product-package-container {
+  display: none; /* the actual packages are in the background image, so hidden */
+}
+
+/* Section 2 - Get In Touch */
+.section-2.get-in-touch {
+  background-color: #f9f4f4;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #505050;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-2.get-in-touch h2 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-2.get-in-touch .subtitle {
+  font-size: 14px;
+  text-align: center;
+  color: #8c8c8c;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  background: #fff;
+  padding: 24px 30px;
+  border-radius: 10px;
+  flex: 1 1 300px;
+  max-width: 320px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.icon {
+  font-size: 22px;
+  margin-right: 14px;
+  color: #b39c63;
+  line-height: 1;
+  margin-top: 3px;
+}
+
+.contact-item strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #333333;
+}
+
+.contact-item p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #5a5a5a;
+  line-height: 1.4;
+}
+
+.contact-form {
+  flex: 1 1 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2f2f2f;
+  margin-bottom: 4px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border: 1.3px solid #ccc;
+  border-radius: 7px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1e1e1e;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #b39c63;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #b39c63;
+  color: #fff;
+  padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #967d3a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+.button-wa{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-wa a{
+  text-decoration: none;
+}
+
+.kontak-wa{
+  background-color: #25D366; /* WhatsApp green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.kontak-wa:hover {
+  background-color: #128C7E; /* Darker green on hover */
+}
+
+.kontak-wa .fa-whatsapp {
+  margin-left: 8px;
+  font-size: 18px;
+  vertical-align: middle;
+}
